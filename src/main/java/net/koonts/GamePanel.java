@@ -11,7 +11,7 @@ public class GamePanel extends JPanel implements ActionListener {
     static final int SCREEN_HEIGHT = 600;
     static final int UNIT_SIZE = 25;
     static final int GAME_UNITS = (SCREEN_WIDTH*SCREEN_HEIGHT)/UNIT_SIZE;
-    static final int DELAY = 75;
+    static final int DELAY = 100;
     final int[] x = new int[GAME_UNITS];
     final int[] y = new int[GAME_UNITS];
     int bodyParts = 6;
@@ -174,21 +174,26 @@ public class GamePanel extends JPanel implements ActionListener {
         public void keyPressed(KeyEvent d) {
             //direction up
             if (d.getKeyChar() == 'w') {
-                if (direction != 'D') {}
-                direction='U';
+                if (direction != 'D') {
+                    direction='U';
+                }
             }
             //direction
             if (d.getKeyChar() == 'a') {
-                if (direction != 'R') {}
-                direction = 'L';
+                if (direction != 'R') {
+                    direction = 'L';
+                }
             }
             if (d.getKeyChar() == 's') {
-                if (direction != 'U') {}
-                direction = 'D';
+                if (direction != 'U') {
+                    direction = 'D';
+                }
             }
             if (d.getKeyChar() == 'd') {
-                if (direction != 'L') {}
-                direction = 'R';
+                if (direction != 'L') {
+                    direction = 'R';
+                }
+
             }
 
 
