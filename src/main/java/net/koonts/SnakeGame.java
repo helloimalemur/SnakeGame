@@ -1,4 +1,4 @@
-//https://youtu.be/bI6e6qjJ8JQ?t=850
+//https://youtu.be/bI6e6qjJ8JQ?t=1068
 package net.koonts;
 
 public class SnakeGame {

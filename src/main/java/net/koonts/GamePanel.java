@@ -6,7 +6,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.util.Objects;
 import java.util.Random;
 
 public class GamePanel extends JPanel implements ActionListener {
@@ -31,20 +30,33 @@ public class GamePanel extends JPanel implements ActionListener {
         this.setBackground(Color.black);
         this.setFocusable(true);
         this.addKeyListener(new myKeyAdapter());
-        stateGame();
+        startGame();
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (Objects.equals(e.toString(), "z")) {
-            System.exit(0);
-        }
+
 
     }
 
-    public void stateGame() {}
-    public void paintComponent(Graphics g) {}
-    public void draw(Graphics g) {}
+    public void startGame() {
+        newApple();
+        running = true;
+        timer = new Timer(DELAY, this);
+        timer.start();
+    }
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        draw(g);
+    }
+    public void draw(Graphics g) {
+
+        for(int i=0;i<(SCREEN_HEIGHT/UNIT_SIZE);i++) {
+            g.drawLine(i*UNIT_SIZE,0,i*UNIT_SIZE,SCREEN_HEIGHT);
+            g.drawLine(0,i*UNIT_SIZE,SCREEN_WIDTH,i*UNIT_SIZE);
+        }
+
+    }
     public void newApple() {}
     public void move() {}
 
