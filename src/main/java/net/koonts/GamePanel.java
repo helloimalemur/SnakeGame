@@ -2,10 +2,8 @@ package net.koonts;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
+import java.awt.event.*;
+import java.util.Objects;
 import java.util.Random;
 
 public class GamePanel extends JPanel implements ActionListener {
@@ -55,17 +53,30 @@ public class GamePanel extends JPanel implements ActionListener {
             g.drawLine(i*UNIT_SIZE,0,i*UNIT_SIZE,SCREEN_HEIGHT);
             g.drawLine(0,i*UNIT_SIZE,SCREEN_WIDTH,i*UNIT_SIZE);
         }
-
+        g.setColor(Color.red);
+        g.fillOval(appleX, appleY, UNIT_SIZE, UNIT_SIZE);
     }
-    public void newApple() {}
+    public void newApple() {
+        //https://youtu.be/bI6e6qjJ8JQ?t=1194
+        //appleX = random.nextInt(Math.abs((int) ((SCREEN_WIDTH/UNIT_SIZE))*UNIT_SIZE));
+        //appleY = random.nextInt(Math.abs((int) ((SCREEN_HEIGHT/UNIT_SIZE))*UNIT_SIZE));
+        appleX = random.nextInt((int) (SCREEN_WIDTH/UNIT_SIZE)*UNIT_SIZE);
+        appleY = random.nextInt((int) (SCREEN_HEIGHT/UNIT_SIZE)*UNIT_SIZE);
+    }
     public void move() {}
 
     public void checkApple() {}
     public void checkCollision() {}
     public void gameOver(Graphics g) {}
 
-    public class myKeyAdapter extends KeyAdapter {
-        public void keyPressed(KeyEvent d) {}
+    public class myKeyAdapter extends KeyAdapter implements KeyListener {
+        @Override
+        public void keyPressed(KeyEvent d) {
+            if (d.getKeyChar() == 'z') {
+                System.exit(0);
+            }
+
+        }
     }
 }
 
