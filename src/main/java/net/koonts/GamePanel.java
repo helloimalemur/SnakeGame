@@ -60,7 +60,7 @@ public class GamePanel extends JPanel implements ActionListener {
         //https://youtu.be/bI6e6qjJ8JQ?t=1194
         //appleX = random.nextInt((SCREEN_WIDTH/UNIT_SIZE)*UNIT_SIZE);
         //appleY = random.nextInt((SCREEN_HEIGHT/UNIT_SIZE)*UNIT_SIZE);
-        //why does this work the way that it does?
+        //why does type casting effect outcome of the math here?
         appleX = random.nextInt((int) (SCREEN_WIDTH/UNIT_SIZE))*UNIT_SIZE;
         appleY = random.nextInt((int) (SCREEN_HEIGHT/UNIT_SIZE))*UNIT_SIZE;
         System.out.println(appleX);
