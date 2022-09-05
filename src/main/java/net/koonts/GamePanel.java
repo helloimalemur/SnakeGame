@@ -60,10 +60,22 @@ public class GamePanel extends JPanel implements ActionListener {
         //https://youtu.be/bI6e6qjJ8JQ?t=1194
         //appleX = random.nextInt((SCREEN_WIDTH/UNIT_SIZE)*UNIT_SIZE);
         //appleY = random.nextInt((SCREEN_HEIGHT/UNIT_SIZE)*UNIT_SIZE);
+        //why does this work the way that it does?
         appleX = random.nextInt((int) (SCREEN_WIDTH/UNIT_SIZE))*UNIT_SIZE;
-        appleY = random.nextInt((int)(SCREEN_HEIGHT/UNIT_SIZE))*UNIT_SIZE;
+        appleY = random.nextInt((int) (SCREEN_HEIGHT/UNIT_SIZE))*UNIT_SIZE;
         System.out.println(appleX);
         System.out.println(appleY);
+
+        int a = (SCREEN_WIDTH/UNIT_SIZE)*UNIT_SIZE;
+        int b = (SCREEN_HEIGHT/UNIT_SIZE)*UNIT_SIZE;
+        int c = (int) (SCREEN_WIDTH/UNIT_SIZE)*UNIT_SIZE;
+        int d = (int)(SCREEN_HEIGHT/UNIT_SIZE)*UNIT_SIZE;
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
+        System.out.println(d);
+
+
     }
     public void move() {}
 
