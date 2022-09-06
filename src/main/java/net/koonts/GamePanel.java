@@ -12,8 +12,8 @@ public class GamePanel extends JPanel implements ActionListener {
     static final int UNIT_SIZE = 25;
     static final int GAME_UNITS = (SCREEN_WIDTH*SCREEN_HEIGHT)/UNIT_SIZE;
     static final int DELAY = 100;
-    final int[] x = new int[GAME_UNITS];
-    final int[] y = new int[GAME_UNITS];
+    final int[] x = new int[(GAME_UNITS)];
+    final int[] y = new int[(GAME_UNITS)];
     int bodyParts = 6;
     int applesEaten = 0;
     int appleX;
