@@ -1,5 +1,7 @@
 # SnakeGame
 Snek gem
+example of game loop design pattern
+
 <h4>Linux;</h4>
 
 1. ```git clone https://github.com/helloimalemur/SnakeGame```
